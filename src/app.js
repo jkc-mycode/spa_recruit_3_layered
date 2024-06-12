@@ -2,9 +2,6 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 
-import UserRouter from './routers/users.router.js';
-import ResumeRouter from './routers/resumes.router.js';
-import AuthRouter from './routers/auth.router.js';
 import apiRouter from './routers/index.js';
 
 import errorHandingMiddleware from './middlewares/error-handing.middleware.js';

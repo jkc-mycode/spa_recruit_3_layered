@@ -36,6 +36,7 @@ export const MESSAGES = {
             },
             UNAUTHORIZED: '인증 정보가 유효하지 않습니다.',
             FORBIDDEN: '접근 권한이 없습니다.',
+            INTERNAL_SERVER_ERROR: '예상치 못한 에러가 발생했습니다. 관리자에게 문의해 주세요.',
             JWT: {
                 NO_TOKEN: '인증 정보가 없습니다.',
                 NOT_SUPPORTED_TYPE: '지원하지 않는 인증 방식입니다.',
