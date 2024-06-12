@@ -26,9 +26,9 @@ model User {
   createdAt    DateTime   @default(now()) @map("created_at")
   updatedAt    DateTime   @updatedAt @map("updated_at")
 
-  Resume        Resume[] // 1명의 사용자는 여러 개의 이력서 작성 가능 (1:N 관계 형성)
-  ResumeHistory ResumeHistory[]
-  RefreshToken  RefreshToken?
+  resume        Resume[] // 1명의 사용자는 여러 개의 이력서 작성 가능 (1:N 관계 형성)
+  resumeHistory ResumeHistory[]
+  refreshToken  RefreshToken?
 
   @@map("users")
 }
@@ -45,17 +45,17 @@ enum RoleType {
 
 model Resume {
   resumeId  Int       @id @default(autoincrement()) @map("resume_id")
-  UserId    Int       @map("user_id") // User 테이블을 참조하는 외래키
+  userId    Int       @map("user_id") // User 테이블을 참조하는 외래키
   title     String
   introduce String    @db.Text
   state     StateType @default(APPLY)
   createdAt DateTime  @default(now()) @map("created_at")
   updatedAt DateTime  @updatedAt @map("updated_at")
 
-  ResumeHistory ResumeHistory[] // 1개의 이력서에는 여러 개의 이력서 로그 기록이 존재 (1:N 관계 형성)
+  resumeHistory ResumeHistory[] // 1개의 이력서에는 여러 개의 이력서 로그 기록이 존재 (1:N 관계 형성)
 
   // User 테이블과의 관계 설정
-  User User @relation(fields: [UserId], references: [userId], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [userId], onDelete: Cascade)
 
   @@map("resumes")
 }
@@ -71,31 +71,31 @@ enum StateType {
 
 model ResumeHistory {
   resumeLogId Int       @id @default(autoincrement()) @map("resume_log_id")
-  ResumeId    Int       @map("resume_id") // Resume 테이블을 참조하는 외래키
-  RecruiterId Int       @map("recruiter_id")
+  resumeId    Int       @map("resume_id") // Resume 테이블을 참조하는 외래키
+  recruiterId Int       @map("recruiter_id")
   oldState    StateType @map("old_state")
   newState    StateType @map("new_state")
   reason      String
   createdAt   DateTime  @default(now()) @map("created_at")
 
   // User 테이블과의 관계 설정
-  User User @relation(fields: [RecruiterId], references: [userId], onDelete: Cascade)
+  user User @relation(fields: [recruiterId], references: [userId], onDelete: Cascade)
 
   // Rsume 테이블과의 관계 설정
-  Resume Resume @relation(fields: [ResumeId], references: [resumeId], onDelete: Cascade)
+  resume Resume @relation(fields: [resumeId], references: [resumeId], onDelete: Cascade)
 
   @@map("resume_histories")
 }
 
 model RefreshToken {
   tokenId   Int      @id @default(autoincrement()) @map("token_id")
-  UserId    Int      @unique @map("user_id")
+  userId    Int      @unique @map("user_id")
   token     String
   ip        String
   userAgent String   @map("user_agent")
   createdAt DateTime @default(now()) @map("created_at")
 
-  User User @relation(fields: [UserId], references: [userId], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [userId], onDelete: Cascade)
 
   @@map("refresh_tokens")
 }
