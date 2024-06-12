@@ -15,16 +15,16 @@ datasource db {
 }
 
 model User {
-  userId       Int      @id @default(autoincrement()) @map("user_id")
-  email        String   @unique @map("email")
-  password     String   @map("password")
-  name         String   @map("name")
-  age          Int      @map("age")
-  gender       String   @map("gender")
-  role         String   @default("APPLICANT") @map("role")
-  profileImage String   @map("profile_image")
-  createdAt    DateTime @default(now()) @map("created_at")
-  updatedAt    DateTime @updatedAt @map("updated_at")
+  userId       Int        @id @default(autoincrement()) @map("user_id")
+  email        String     @unique
+  password     String
+  name         String
+  age          Int
+  gender       GenderType
+  role         RoleType   @default(APPLICANT)
+  profileImage String     @map("profile_image")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
 
   Resume        Resume[] // 1명의 사용자는 여러 개의 이력서 작성 가능 (1:N 관계 형성)
   ResumeHistory ResumeHistory[]
@@ -33,14 +33,24 @@ model User {
   @@map("users")
 }
 
+enum GenderType {
+  MALE
+  FEMALE
+}
+
+enum RoleType {
+  APPLICANT
+  RECRUITER
+}
+
 model Resume {
-  resumeId  Int      @id @default(autoincrement()) @map("resume_id")
-  UserId    Int      @map("user_id") // User 테이블을 참조하는 외래키
-  title     String   @map("title")
-  introduce String   @map("introduce") @db.Text
-  state     String   @default("APPLY") @map("state")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  resumeId  Int       @id @default(autoincrement()) @map("resume_id")
+  UserId    Int       @map("user_id") // User 테이블을 참조하는 외래키
+  title     String
+  introduce String    @db.Text
+  state     StateType @default(APPLY)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
 
   ResumeHistory ResumeHistory[] // 1개의 이력서에는 여러 개의 이력서 로그 기록이 존재 (1:N 관계 형성)
 
@@ -50,14 +60,23 @@ model Resume {
   @@map("resumes")
 }
 
+enum StateType {
+  APPLY
+  DROP
+  PASS
+  INTERVIEW1
+  INTERVIEW2
+  FINAL_PASS
+}
+
 model ResumeHistory {
-  resumeLogId Int      @id @default(autoincrement()) @map("resume_log_id")
-  ResumeId    Int      @map("resume_id") // Resume 테이블을 참조하는 외래키
-  RecruiterId Int      @map("recruiter_id")
-  oldState    String   @map("old_state")
-  newState    String   @map("new_state")
-  reason      String   @map("reason")
-  createdAt   DateTime @default(now()) @map("created_at")
+  resumeLogId Int       @id @default(autoincrement()) @map("resume_log_id")
+  ResumeId    Int       @map("resume_id") // Resume 테이블을 참조하는 외래키
+  RecruiterId Int       @map("recruiter_id")
+  oldState    StateType @map("old_state")
+  newState    StateType @map("new_state")
+  reason      String
+  createdAt   DateTime  @default(now()) @map("created_at")
 
   // User 테이블과의 관계 설정
   User User @relation(fields: [RecruiterId], references: [userId], onDelete: Cascade)
@@ -71,8 +90,8 @@ model ResumeHistory {
 model RefreshToken {
   tokenId   Int      @id @default(autoincrement()) @map("token_id")
   UserId    Int      @unique @map("user_id")
-  token     String   @map("token")
-  ip        String   @map("ip")
+  token     String
+  ip        String
   userAgent String   @map("user_agent")
   createdAt DateTime @default(now()) @map("created_at")
 
