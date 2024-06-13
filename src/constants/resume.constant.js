@@ -8,7 +8,7 @@ export const RESUME_CONSTANT = {
         FINAL_PASS: 'FINAL_PASS',
     },
     SORT_TYPE: {
-        ASC: 'ASC',
-        DESC: 'DESC',
+        ASC: 'asc',
+        DESC: 'desc',
     },
 };
