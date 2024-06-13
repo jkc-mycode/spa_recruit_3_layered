@@ -69,9 +69,11 @@ export class AuthController {
                 req.headers[AUTH_CONSTANT.USER_AGENT],
             );
 
-            return res
-                .status(HTTP_STATUS.OK)
-                .json({ status: HTTP_STATUS.OK, message: MESSAGES.AUTH.SIGN_IN, data: { accessToken, refreshToken } });
+            return res.status(HTTP_STATUS.OK).json({
+                status: HTTP_STATUS.OK,
+                message: MESSAGES.AUTH.SIGN_IN.SUCCEED,
+                data: { accessToken, refreshToken },
+            });
         } catch (err) {
             next(err);
         }
