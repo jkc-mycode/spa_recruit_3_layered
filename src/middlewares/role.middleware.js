@@ -2,6 +2,7 @@
 
 import { HTTP_STATUS } from '../constants/http-status.constant.js';
 import { MESSAGES } from '../constants/message.constant.js';
+import { HttpError } from '../errors/http.error.js';
 
 // 그렇기에 매개변수를 사용할 수 있는 미들웨어를 만들기 위해 미들웨어를 리턴하는 함수를 만듦
 export const requiredRoles = (roles) => {
@@ -14,6 +15,6 @@ export const requiredRoles = (roles) => {
             // 역할이 포함되면 다음으로 진행
             return next();
         }
-        return res.status(HTTP_STATUS.FORBIDDEN).json({ status: HTTP_STATUS.FORBIDDEN, message: MESSAGES.AUTH.COMMON.FORBIDDEN });
+        next(new HttpError.Forbidden(MESSAGES.AUTH.COMMON.FORBIDDEN));
     };
 };
