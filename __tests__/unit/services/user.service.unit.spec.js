@@ -1,55 +1,46 @@
 import { jest, describe, test, expect, beforeEach } from '@jest/globals';
+import { UserService } from '../../../src/services/user.service';
 
-// TODO: template 이라고 되어 있는 부분을 다 올바르게 수정한 후 사용해야 합니다.
-
-const mockTemplateRepository = {
-    create: jest.fn(),
-    readMany: jest.fn(),
-    readOne: jest.fn(),
-    update: jest.fn(),
-    delete: jest.fn(),
+const mockUserRepository = {
+    getUserInfo: jest.fn(),
 };
 
-const templateService = new TemplateService(mockTemplateRepository);
+const userService = new UserService(mockUserRepository);
 
-describe('TemplateService Unit Test', () => {
+describe('UserService Unit Test', () => {
     beforeEach(() => {
         jest.resetAllMocks(); // 모든 Mock을 초기화합니다.
     });
 
-    test('create Method', async () => {
-        // GIVEN
-        // WHEN
-        // THEN
-    });
+    // 사용자 ID로 사용자 조회 테스트 코드
+    test('getUserInfo Method', async () => {
+        /* 설정 부분 */
+        // Repository의 getUserInfo 메서드 임시 결과값
+        const userInfoSample = {
+            userId: 1,
+            email: 'spartan@spartacodingclub.kr',
+            name: '스파르탄',
+            age: 28,
+            gender: 'MALE',
+            role: 'RECRUITER',
+            profileImage: 'https://prismalens.vercel.app/header/logo-dark.svg',
+            createdAt: '2024-06-09T13:56:19.906Z',
+            updatedAt: '2024-06-09T13:56:19.906Z',
+        };
+        // Repository의 getUserInfo 메서드 반환값 설정
+        mockUserRepository.getUserInfo.mockReturnValue(userInfoSample);
 
-    test('readMany Method', async () => {
-        // GIVEN
-        // WHEN
-        // THEN
-    });
+        /* 실행 부분, 실제 저장소(Repository)의  getUserInfo 메서드 실행 */
+        const userId = 1;
+        const user = await userService.getUserInfo(userId);
 
-    test('readOne Method', async () => {
-        // GIVEN
-        // WHEN
-        // THEN
-    });
-
-    test('readOne Method - 이력서 없는 경우', async () => {
-        // GIVEN
-        // WHEN
-        // THEN
-    });
-
-    test('update Method', async () => {
-        // GIVEN
-        // WHEN
-        // THEN
-    });
-
-    test('delete Method', async () => {
-        // GIVEN
-        // WHEN
-        // THEN
+        /* 테스트(조건) 부분 */
+        // Service의 getUserInfo 메서드 실행 결과값 user와
+        // Repository의 getUserInfo 메서드 실행 결과값 userInfoSample과 같은지 검사
+        expect(user).toBe(userInfoSample);
+        // Repository의 getUserInfo 메서드가 1번만 실행되었는지 검사
+        expect(mockUserRepository.getUserInfo).toHaveBeenCalledTimes(1);
+        // Repository의 getUserInfo 메서드가 매개변수와 함께 호출되었는지 검사
+        expect(mockUserRepository.getUserInfo).toHaveBeenCalledWith(userId);
     });
 });

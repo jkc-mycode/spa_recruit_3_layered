@@ -32,6 +32,8 @@ export class AuthRepository {
             update: { token, createdAt: new Date(Date.now()) },
             create: { userId, token, ip, userAgent },
         });
+
+        return;
     };
 
     // 사용자 ID로 사용자 조회
