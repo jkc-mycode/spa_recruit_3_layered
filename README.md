@@ -459,47 +459,101 @@ export default {
 
 ## 5. 테스트 코드(미완성)
 ### 5-1. 회원가입 Controller, Service, Repository 단위 테스트 코드
-- 
+#### 5-1-1. 회원가입 Controller 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L46
 
+#### 5-1-2. 회원가입 Service 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L22-L109
+
+#### 5-1-3. 회원가입 Repository 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L27-L115
 
 <br>
 
 ### 5-2. 로그인 Controller, Service, Repository 단위 테스트 코드
-- 
+#### 5-2-1. 로그인 Controller 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L129
 
+#### 5-2-2. 로그인 Service 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L111-L190
+
+#### 5-2-3. 로그인 Repository 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L117
 
 <br>
 
 ### 5-3. 내 정보 조회 Controller, Service, Repository 단위 테스트 코드
-- 
+#### 5-3-1. 내 정보 조회 Controller 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/user.controller.unit.spec.js#L31
+
+#### 5-3-2. 내 정보 조회 Service 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/user.service.unit.spec.js#L15
+
+#### 5-3-3. 내 정보 조회 Repository 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/user.repository.unit.spec.js#L17
 
 <br>
 
 ### 5-4. 이력서 생성 Controller, Service, Repository  단위 테스트 코드
+#### 5-4-1. 이력서 생성 Controller 단위 테스트 코드
+- 
+
+#### 5-4-2. 이력서 생성 Service 단위 테스트 코드
+- 
+
+#### 5-4-3. 이력서 생성 Repository 단위 테스트 코드
 - 
 
 
 <br>
 
 ### 5-5. 이력서 목록 조회 Controller, Service, Repository 단위 테스트 코드
+#### 5-5-1. 이력서 목록 조회 Controller 단위 테스트 코드
+- 
+
+#### 5-5-2. 이력서 목록 조회 Service 단위 테스트 코드
+- 
+
+#### 5-5-3. 이력서 목록 조회 Repository 단위 테스트 코드
 - 
 
 
 <br>
 
 ### 5-6.이력서 상세 조회 Controller, Service, Repository 단위 테스트 코드
+#### 5-6-1. 이력서 상세 조회 Controller 단위 테스트 코드
+- 
+
+#### 5-6-2. 이력서 상세 조회 Service 단위 테스트 코드
+- 
+
+#### 5-6-3. 이력서 상세 조회 Repository 단위 테스트 코드
 - 
 
 
 <br>
 
 ### 5-7. 이력서 수정 Controller, Service, Repository 단위 테스트 코드
+#### 5-7-1. 이력서 수정 Controller 단위 테스트 코드
+- 
+
+#### 5-7-2. 이력서 수정 Service 단위 테스트 코드
+- 
+
+#### 5-7-3. 이력서 수정 Repository 단위 테스트 코드
 - 
 
 
 <br>
 
 ### 5-8. 이력서 삭제 Controller, Service, Repository 단위 테스트 코드
+#### 5-8-1. 이력서 삭제 Controller 단위 테스트 코드
+- 
+
+#### 5-8-2. 이력서 삭제 Service 단위 테스트 코드
+- 
+
+#### 5-8-3. 이력서 삭제 Repository 단위 테스트 코드
 - 
 
 
@@ -507,25 +561,53 @@ export default {
 
 
 ### 5-9. 이력서 지원 상태 변경 Controller, Service, Repository 단위 테스트 코드
+#### 5-9-1. 이력서 지원 상태 변경 Controller 단위 테스트 코드
+- 
+
+#### 5-9-2. 이력서 지원 상태 변경 Service 단위 테스트 코드
+- 
+
+#### 5-9-3. 이력서 지원 상태 변경 Repository 단위 테스트 코드
 - 
 
 
 <br>
 
 ### 5-10. 이력서 로그 목록 조회 Controller, Service, Repository 단위 테스트 코드
+#### 5-10-1. 이력서 로그 목록 조회 Controller 단위 테스트 코드
+- 
+
+#### 5-10-2. 이력서 로그 목록 조회 Service 단위 테스트 코드
+- 
+
+#### 5-10-3. 이력서 로그 목록 조회 Repository 단위 테스트 코드
 - 
 
 
 <br>
 
 ### 5-11. 토큰 재발급 Controller, Service, Repository 단위 테스트 코드
-- 
+#### 5-11-1. 토큰 재발급 Controller 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L225
+
+#### 5-11-2. 토큰 재발급 Service 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L111-L190
+
+#### 5-11-3. 토큰 재발급 Repository 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L117
 
 
 <br>
 
 ### 5-12. 로그아웃 Controller, Service, Repository 단위 테스트 코드
-- 
+#### 5-12-1. 로그아웃 Controller 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L306
+
+#### 5-12-2. 로그아웃 Service 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L251
+
+#### 5-12-3. 로그아웃 Repository 단위 테스트 코드
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L216
 
 <br>
 
@@ -569,15 +651,130 @@ export default {
 <br>
 
 ## 7. 어려웠던 점
-### 7-1. 
-- 
+### 7-1. 인증 미들웨어의 Prisma 코드 변경
+- 3-Layered Architecture Pattern 리팩토링 중 내 정보 조회 API를 분리하고 있었음
+
+- 어느 정도 분리가 끝나서 AccessToken 미들웨어도 코드의 구조 변화가 필요했음
+
+- 도저히 어디를 고쳐야 할지 모르겠어서 튜터님께 도움을 요청함
+
+- 튜터님께서 간단한 흐름을 알려주셨기에 조금 더 찾아보면서 구현을 시작함
+
+- 찾은 방법은 인증 미들웨어에서 Prisma 클라이언트를 직접 사용하는 부분을 Service 클래스의 인스턴스로 접근하는 방식을 찾음
+
+- 그러기 위해서는 인증 미들웨어에 Service 클래스의 인스턴스가 매개변수로 들어가야 함
+
+- 그래서 다시 찾아보니 미들웨어도 매개변수를 가지는 형태로 바꿀 수 있다고 함
+
+- 기존의 Prisma 클라이언트를 사용하는 방식은 다음과 같음
+```javascript
+import { HTTP_STATUS } from '../constants/http-status.constant.js';
+import { MESSAGES } from '../constants/message.constant.js';
+import { prisma } from '../utils/prisma.util.js';
+import jwt from 'jsonwebtoken';
+
+// AccessToken 인증 미들웨어
+export default async (req, res, next) => {
+    try {
+        // 헤더에서 Access 토큰 가져옴
+        const authorization = req.headers['authorization'];
+        if (!authorization) throw new Error(MESSAGES.AUTH.COMMON.JWT.NO_TOKEN);
+
+        // Access 토큰이 Bearer 형식인지 확인
+        const [tokenType, token] = authorization.split(' ');
+        if (tokenType !== 'Bearer') throw new Error(MESSAGES.AUTH.COMMON.JWT.NOT_SUPPORTED_TYPE);
+
+        // 서버에서 발급한 JWT가 맞는지 검증
+        const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET_KEY);
+        const userId = decodedToken.userId;
+
+        // JWT에서 꺼낸 userId로 실제 사용자가 있는지 확인
+        const user = await prisma.user.findFirst({ where: { userId: +userId }, omit: { password: true } });
+        if (!user) {
+            return res.status(HTTP_STATUS.UNAUTHORIZED).json({ status: HTTP_STATUS.UNAUTHORIZED, message: MESSAGES.AUTH.COMMON.JWT.NO_USER });
+        }
+
+        // 조회된 사용자 정보를 req.user에 넣음
+        req.user = user;
+        // 다음 동작 진행
+        next();
+    } catch (err) {
+        switch (err.name) {
+            case 'TokenExpiredError':
+                return res.status(HTTP_STATUS.UNAUTHORIZED).json({ status: HTTP_STATUS.UNAUTHORIZED, message: MESSAGES.AUTH.COMMON.JWT.EXPIRED });
+            case 'JsonWebTokenError':
+                return res.status(HTTP_STATUS.UNAUTHORIZED).json({ status: HTTP_STATUS.UNAUTHORIZED, message: MESSAGES.AUTH.COMMON.JWT.INVALID });
+            default:
+                return res
+                    .status(HTTP_STATUS.UNAUTHORIZED)
+                    .json({ status: HTTP_STATUS.UNAUTHORIZED, message: err.message ?? MESSAGES.AUTH.COMMON.JWT.ETC });
+        }
+    }
+};
+```
+- 이번에 찾은 Service 클래스의 메서드에게 그 역할을 넘기는 방법은 다음과 같음
+```javascript
+import jwt from 'jsonwebtoken';
+import { AUTH_CONSTANT } from '../constants/auth.constant.js';
+import { ERROR_CONSTANT } from '../constants/error.constant.js';
+import { MESSAGES } from '../constants/message.constant.js';
+import { HttpError } from '../errors/http.error.js';
+
+// AccessToken 인증 미들웨어
+export const authAccessTokenMiddleware = (userService) => {
+    return async (req, res, next) => {
+        try {
+            // 헤더에서 Access 토큰 가져옴
+            const authorization = req.headers[AUTH_CONSTANT.AUTHORIZATION];
+            if (!authorization) throw new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.NO_TOKEN);
+
+            // Access 토큰이 Bearer 형식인지 확인
+            const [tokenType, token] = authorization.split(' ');
+            if (tokenType !== AUTH_CONSTANT.BEARER)
+                throw new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.NOT_SUPPORTED_TYPE);
+
+            // 서버에서 발급한 JWT가 맞는지 검증
+            const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET_KEY);
+            const userId = decodedToken.userId;
+
+            // 사용자 정보를 UserService에게 요청
+            const user = await userService.getUserInfo(userId);
+            if (!user) throw new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.NO_USER);
+
+            // 조회된 사용자 정보를 req.user에 넣음
+            req.user = user;
+            // 다음 동작 진행
+            next();
+        } catch (err) {
+            switch (err.name) {
+                case ERROR_CONSTANT.NAME.EXPIRED:
+                    next(new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.EXPIRED));
+                    break;
+                case ERROR_CONSTANT.NAME.JWT:
+                    next(new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.INVALID));
+                    break;
+                default:
+                    next(new HttpError.Unauthorized(err.message ?? MESSAGES.AUTH.COMMON.JWT.ETC));
+                    break;
+            }
+        }
+    };
+};
+```
 
 <br>
 
-### 7-2. 
-- 
+### 7-2. 테스트 코드 구현 자체의 어려움
+- 처음 접하는 내용이긴 하지만 너무나도 생소 했음
+
+- Jest에서 편리한 메서드들을 제공한다고 하는데 생각보다 에러를 고치느라 찾아볼 겨를이 없었음
+
+- 결국 GPT의 도움을 받아서 코드를 조금씩 구현함
+
+- 한줄 한줄 주석을 달면서 작성했지만 아직도 이해가 쉽지 않음
+
+- 내가 너무 어렵게 모든 코드들을 테스트 할려고 해서 더 복잡하고 이해가 되지 않는것 같음
+
+- 추후에 Jest관련 메서드들을 조금 더 활용하는 방법을 찾아봐야 겠음
 
 <br>
-
-### 7-3. 
-- 
