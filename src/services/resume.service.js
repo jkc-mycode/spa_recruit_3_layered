@@ -61,7 +61,7 @@ export class ResumeService {
         }
 
         // 이력서 ID, 작성자 ID가 모두 일치한 이력서 조회
-        let resume = await this.resumeRepository.getResumeDetail(whereCondition);
+        let resume = await this.resumeRepository.getResumeDetail(whereCondition, true);
         if (!resume) throw new HttpError.NotFound(MESSAGES.RESUMES.COMMON.NOT_FOUND);
         resume = {
             resumeId: resume.resumeId,
