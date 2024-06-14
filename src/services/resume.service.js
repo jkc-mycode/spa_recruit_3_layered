@@ -15,27 +15,6 @@ export class ResumeService {
         return resume;
     };
 
-    // 채용 담당자인지 아닌지 판별
-    getResumeListWhereCondition = async (user, status) => {
-        const whereCondition = {};
-        // 채용 담당자인 경우
-        if (user.role === USER_CONSTANT.USER_ROLE.RECRUITER) {
-            // 필터링 조건을 가져옴
-            const stateFilter = status.toUpperCase();
-
-            // 이력서 상태 필터링과 이력서 상태에 맞는 문자열일 때
-            if (stateFilter && Object.values(RESUME_CONSTANT.RESUME_STATE).includes(stateFilter)) {
-                whereCondition.state = stateFilter;
-            }
-        }
-        // 채용 담당자가 아닌 경우
-        else {
-            whereCondition.userId = user.userId;
-        }
-
-        return whereCondition;
-    };
-
     // 이력서 목록 조회
     getResumeList = async (user, status, sortType) => {
         // 채용 담당자인지 아닌지 판별
