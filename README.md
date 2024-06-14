@@ -612,6 +612,16 @@ export default {
 <br>
 
 ## 6. 테스트 사진 첨부
+- User 단위 테스트
+![User Controller 단위 테스트](./imgs/test_user_controller.png)
+![User Service 단위 테스트](./imgs/test_user_service.png)
+![User Repository 단위 테스트](./imgs/test_user_repository.png)
+
+- Auth 단위 테스트
+![Auth Controller 단위 테스트](./imgs/test_auth_controller.png)
+![Auth Service 단위 테스트](./imgs/test_auth_service.png)
+![Auth Repository 단위 테스트](./imgs/test_auth_repository.png)
+
 - 회원가입 API
 ![회원가입 API](./imgs/sign-up.png)
 
@@ -775,6 +785,6 @@ export const authAccessTokenMiddleware = (userService) => {
 
 - 내가 너무 어렵게 모든 코드들을 테스트 할려고 해서 더 복잡하고 이해가 되지 않는것 같음
 
-- 추후에 Jest관련 메서드들을 조금 더 활용하는 방법을 찾아봐야 겠음
+- 튜터님의 해설강의를 통해서 테스트 코드의 로직과 구현 방법을 익혀보자
 
 <br>
