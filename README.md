@@ -633,10 +633,10 @@ export default {
 - https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/controllers/auth.controller.unit.spec.js#L228-L271
 
 #### 5-12-2. 로그아웃 Service 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L251
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/1baab8c0df5fe3ecd0d422a22b9d8e9ddabdcb90/__tests__/unit/services/auth.service.unit.spec.js#L185-L215
 
 #### 5-12-3. 로그아웃 Repository 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L216
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/repositories/auth.repository.unit.spec.js#L84-L108
 
 
 <br>
