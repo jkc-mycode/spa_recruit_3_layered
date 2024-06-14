@@ -29,7 +29,7 @@ export class UserRepository {
         return user;
     };
 
-    // 사용자 ID로 사용자 조회
+    // 사용자 Email로 사용자 조회
     getUserInfoByEmail = async (email) => {
         const user = await this.prisma.user.findFirst({
             where: { email },

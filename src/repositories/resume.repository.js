@@ -27,10 +27,10 @@ export class ResumeRepository {
     };
 
     // 이력서 상세 조회
-    getResumeDetail = async (whereCondition) => {
+    getResumeDetail = async (whereCondition, includeUser = false) => {
         const resume = await this.prisma.resume.findFirst({
             where: whereCondition,
-            include: { user: true },
+            include: { user: includeUser },
         });
 
         return resume;

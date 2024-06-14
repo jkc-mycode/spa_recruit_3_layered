@@ -3,6 +3,9 @@ import jwt from 'jsonwebtoken';
 import { AUTH_CONSTANT } from '../constants/auth.constant.js';
 import { HttpError } from '../errors/http.error.js';
 import { MESSAGES } from '../constants/message.constant.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export class AuthService {
     constructor(userRepository, authRepository) {

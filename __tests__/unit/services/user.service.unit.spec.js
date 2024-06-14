@@ -2,7 +2,7 @@ import { jest, describe, test, expect, beforeEach } from '@jest/globals';
 import { UserService } from '../../../src/services/user.service';
 
 const mockUserRepository = {
-    getUserInfo: jest.fn(),
+    getUserInfoById: jest.fn(),
 };
 
 const userService = new UserService(mockUserRepository);
@@ -28,19 +28,19 @@ describe('UserService Unit Test', () => {
             updatedAt: '2024-06-09T13:56:19.906Z',
         };
         // Repository의 getUserInfo 메서드 반환값 설정
-        mockUserRepository.getUserInfo.mockReturnValue(userInfoSample);
+        mockUserRepository.getUserInfoById.mockReturnValue(userInfoSample);
 
         /* 실행 부분, 실제 저장소(Repository)의  getUserInfo 메서드 실행 */
         const userId = 1;
-        const user = await userService.getUserInfo(userId);
+        const user = await userService.getUserInfoById(userId);
 
         /* 테스트(조건) 부분 */
+        // Repository의 getUserInfo 메서드가 1번만 실행되었는지 검사
+        expect(mockUserRepository.getUserInfoById).toHaveBeenCalledTimes(1);
+        // Repository의 getUserInfo 메서드가 매개변수와 함께 호출되었는지 검사
+        expect(mockUserRepository.getUserInfoById).toHaveBeenCalledWith(userId);
         // Service의 getUserInfo 메서드 실행 결과값 user와
         // Repository의 getUserInfo 메서드 실행 결과값 userInfoSample과 같은지 검사
         expect(user).toBe(userInfoSample);
-        // Repository의 getUserInfo 메서드가 1번만 실행되었는지 검사
-        expect(mockUserRepository.getUserInfo).toHaveBeenCalledTimes(1);
-        // Repository의 getUserInfo 메서드가 매개변수와 함께 호출되었는지 검사
-        expect(mockUserRepository.getUserInfo).toHaveBeenCalledWith(userId);
     });
 });
