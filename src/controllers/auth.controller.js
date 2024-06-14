@@ -12,27 +12,15 @@ export class AuthController {
     signUp = async (req, res, next) => {
         try {
             const { email, password, passwordConfirm, name, age, gender, profileImage } = req.body;
-            // 이메일 중복 확인
-            const isExistUser = await this.authService.getUserByEmail(email);
-            if (isExistUser) {
-                throw new HttpError.Conflict(MESSAGES.AUTH.COMMON.EMAIL.DUPLICATED);
-            }
 
-            // 비밀번호 확인 결과
-            if (password !== passwordConfirm) {
-                throw new HttpError.BadRequest(MESSAGES.AUTH.COMMON.PASSWORD_CONFIRM.INCONSISTENT);
-            }
-
-            // 비밀번호 암호화
-            const hashedPassword = await this.authService.getHashedPassword(password, AUTH_CONSTANT.HASH_SALT);
-
-            // 사용자 생성
-            const user = await this.authService.createUser(
+            // 서비스 로직
+            const user = await this.authService.signUp(
                 email,
-                hashedPassword,
+                password,
+                passwordConfirm,
                 name,
                 age,
-                gender.toUpperCase(),
+                gender,
                 profileImage,
             );
 
@@ -49,22 +37,10 @@ export class AuthController {
         try {
             const { email, password } = req.body;
 
-            // 입력받은 이메일로 사용자 조회
-            const user = await this.authService.getUserByEmail(email);
-
-            // 사용자 비밀번호와 입력한 비밀번호 일치 확인
-            if (!user || !(await bcrypt.compare(password, user.password))) {
-                throw new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.UNAUTHORIZED);
-            }
-
-            // 로그인 성공하면 JWT 토큰 발급
-            const accessToken = await this.authService.createAccessToken(user.userId);
-            const refreshToken = await this.authService.createRefreshToken(user.userId);
-
-            // 기존 토큰이 있으면 업데이트 없으면 생성
-            await this.authService.upsertRefreshToken(
-                user.userId,
-                refreshToken,
+            // 서비스 로직
+            const [accessToken, refreshToken] = await this.authService.signIn(
+                email,
+                password,
                 req.ip,
                 req.headers[AUTH_CONSTANT.USER_AGENT],
             );
@@ -85,16 +61,9 @@ export class AuthController {
             // 사용자 정보 가져옴
             const user = req.user;
 
-            // Access Token 재발급 (12시간)
-            const accessToken = await this.authService.createAccessToken(user.userId);
-
-            // Refresh Token 재발급 (7일)
-            const refreshToken = await this.authService.createRefreshToken(user.userId);
-
-            // 기존 토큰이 있으면 업데이트 없으면 생성
-            await this.authService.upsertRefreshToken(
+            // 서비스 로직
+            const [accessToken, refreshToken] = await this.authService.refresh(
                 user.userId,
-                refreshToken,
                 req.ip,
                 req.headers[AUTH_CONSTANT.USER_AGENT],
             );
@@ -109,14 +78,14 @@ export class AuthController {
         }
     };
 
-    // 로그아웃 기능
+    // 로그아웃
     signOut = async (req, res, next) => {
         try {
             // 사용자 정보 가져옴
             const user = req.user;
 
-            // DB에서 Refresh Token 삭제
-            const deletedTokenUserId = await this.authService.deleteRefreshToken(user.userId);
+            // 서비스 로직
+            const deletedTokenUserId = await this.authService.signOut(user.userId);
 
             // 로그아웃한 사용자 ID 반환
             return res.status(HTTP_STATUS.OK).json({
