@@ -5,14 +5,15 @@ import { HttpError } from '../errors/http.error.js';
 import { MESSAGES } from '../constants/message.constant.js';
 
 export class AuthService {
-    constructor(authRepository) {
+    constructor(userRepository, authRepository) {
+        this.userRepository = userRepository;
         this.authRepository = authRepository;
     }
 
     // 회원가입
     signUp = async (email, password, passwordConfirm, name, age, gender, profileImage) => {
         // 이메일 중복 확인
-        const isExistUser = await this.authRepository.getUserByEmail(email);
+        const isExistUser = await this.userRepository.getUserInfoByEmail(email);
         if (isExistUser) {
             throw new HttpError.Conflict(MESSAGES.AUTH.COMMON.EMAIL.DUPLICATED);
         }
@@ -26,7 +27,7 @@ export class AuthService {
         const hashedPassword = await bcrypt.hash(password, AUTH_CONSTANT.HASH_SALT);
 
         // 사용자 생성
-        const user = await this.authRepository.createUser(
+        const user = await this.userRepository.createUser(
             email,
             hashedPassword,
             name,
@@ -44,7 +45,7 @@ export class AuthService {
     // 로그인
     signIn = async (email, password, ip, userAgent) => {
         // 입력받은 이메일로 사용자 조회
-        const user = await this.authRepository.getUserByEmail(email);
+        const user = await this.userRepository.getUserInfoByEmail(email);
 
         // 사용자 비밀번호와 입력한 비밀번호 일치 확인
         if (!user || !(await bcrypt.compare(password, user.password))) {
@@ -89,13 +90,6 @@ export class AuthService {
         const deletedTokenUserId = await this.authRepository.deleteRefreshToken(userId);
 
         return deletedTokenUserId;
-    };
-
-    // 사용자 ID로 사용자 조회
-    getUserInfo = async (userId) => {
-        const user = await this.authRepository.getUserInfo(userId);
-
-        return user;
     };
 
     // DB에 저장된 RefreshToken를 조회

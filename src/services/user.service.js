@@ -4,8 +4,8 @@ export class UserService {
     }
 
     // 사용자 ID로 사용자 조회
-    getUserInfo = async (userId) => {
-        const user = await this.userRepository.getUserInfo(userId);
+    getUserInfoById = async (userId) => {
+        const user = await this.userRepository.getUserInfoById(userId);
 
         return user;
     };

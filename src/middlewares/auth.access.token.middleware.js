@@ -22,7 +22,7 @@ export const authAccessTokenMiddleware = (userService) => {
             const userId = decodedToken.userId;
 
             // 사용자 정보를 UserService에게 요청
-            const user = await userService.getUserInfo(userId);
+            const user = await userService.getUserInfoById(userId);
             if (!user) throw new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.NO_USER);
 
             // 조회된 사용자 정보를 req.user에 넣음

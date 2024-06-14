@@ -1,8 +1,6 @@
-import bcrypt from 'bcrypt';
 import { AUTH_CONSTANT } from '../constants/auth.constant.js';
 import { HTTP_STATUS } from '../constants/http-status.constant.js';
 import { MESSAGES } from '../constants/message.constant.js';
-import { HttpError } from '../errors/http.error.js';
 
 export class AuthController {
     constructor(authService) {

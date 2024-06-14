@@ -5,7 +5,7 @@ import { AUTH_CONSTANT } from '../constants/auth.constant.js';
 import { HttpError } from '../errors/http.error.js';
 
 // RefreshToken 인증 미들웨어
-export const authRefreshTokenMiddleware = (authService) => {
+export const authRefreshTokenMiddleware = (authService, userService) => {
     return async (req, res, next) => {
         try {
             // 헤더에서 Refresh 토큰 가져옴
@@ -22,7 +22,7 @@ export const authRefreshTokenMiddleware = (authService) => {
             const userId = decodedToken.userId;
 
             // JWT에서 꺼낸 userId로 실제 사용자가 있는지 확인
-            const user = await authService.getUserInfo(userId);
+            const user = await userService.getUserInfoById(userId);
             if (!user) throw new HttpError.Unauthorized(MESSAGES.AUTH.COMMON.JWT.NO_USER);
 
             // DB에 저장된 RefreshToken를 조회
