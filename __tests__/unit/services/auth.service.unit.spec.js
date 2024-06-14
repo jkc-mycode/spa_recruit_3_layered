@@ -182,6 +182,38 @@ describe('AuthService Unit Test', () => {
         expect([accessToken, refreshToken]).toEqual([expect.any(String), expect.any(String)]);
     });
 
+    // 로그아웃 기능
+    test('signOut Method', async () => {
+        /* 설정 부분 */
+        // user 객체 형식 설정
+        const userInfoSample = {
+            userId: 1,
+            email: 'spartan@spartacodingclub.kr',
+            name: '스파르탄',
+            age: 28,
+            gender: 'MALE',
+            role: 'APPLICANT',
+            profileImage: 'https://prismalens.vercel.app/header/logo-dark.svg',
+            createdAt: '2024-06-13T08:53:46.951Z',
+            updatedAt: '2024-06-13T08:53:46.951Z',
+        };
+
+        // Auth Repository의 deleteRefreshToken 메서드 반환값을 설정
+        mockAuthRepository.deleteRefreshToken.mockResolvedValue(userInfoSample.userId);
+
+        /* 실행 부분, Controller의 signOut 메서드 실행 */
+        const deletedTokenUserId = await authService.signOut(userInfoSample.userId);
+
+        /* 테스트(조건) 부분 */
+        // Auth Repository의 deleteRefreshToken 메서드가 1번만 실행되었는지 검사
+        expect(mockAuthRepository.deleteRefreshToken).toHaveBeenCalledTimes(1);
+        // Auth Repository의 deleteRefreshToken 메서드가 매개변수와 함께 호출되었는지 검사
+        expect(mockAuthRepository.deleteRefreshToken).toHaveBeenCalledWith(userInfoSample.userId);
+        // Auth Service의 signOut 메서드 결과값과
+        // Auth Repository의 deleteRefreshToken 메서드의 결과값이 같은지 검사
+        expect(deletedTokenUserId).toEqual(userInfoSample.userId);
+    });
+
     // DB에 저장된 RefreshToken를 조회
     test('getRefreshToken Method', async () => {
         /* 설정 부분 */

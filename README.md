@@ -482,7 +482,7 @@ export default {
 - https://github.com/jkc-mycode/spa_recruit_3_layered/blob/5b931cdd9c90fec7c1d34e379e007b6639a5d7e1/__tests__/unit/services/auth.service.unit.spec.js#L25-L84
 
 #### 5-1-3. 회원가입 Repository 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L27-L115
+- 
 
 
 <br>
@@ -490,13 +490,13 @@ export default {
 
 ### 5-2. 로그인 Controller, Service, Repository 단위 테스트 코드
 #### 5-2-1. 로그인 Controller 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L129
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/5b931cdd9c90fec7c1d34e379e007b6639a5d7e1/__tests__/unit/controllers/auth.controller.unit.spec.js#L105-L161
 
 #### 5-2-2. 로그인 Service 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L111-L190
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/5b931cdd9c90fec7c1d34e379e007b6639a5d7e1/__tests__/unit/services/auth.service.unit.spec.js#L86-L145
 
 #### 5-2-3. 로그인 Repository 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L117
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/repositories/auth.repository.unit.spec.js#L19-L52
 
 
 <br>
@@ -504,13 +504,13 @@ export default {
 
 ### 5-3. 내 정보 조회 Controller, Service, Repository 단위 테스트 코드
 #### 5-3-1. 내 정보 조회 Controller 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/user.controller.unit.spec.js#L31
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/controllers/user.controller.unit.spec.js#L31-L73
 
 #### 5-3-2. 내 정보 조회 Service 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/user.service.unit.spec.js#L15
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/services/user.service.unit.spec.js#L15-L45
 
 #### 5-3-3. 내 정보 조회 Repository 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/user.repository.unit.spec.js#L17
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/services/user.service.unit.spec.js#L15-L45
 
 
 <br>
@@ -616,13 +616,13 @@ export default {
 
 ### 5-11. 토큰 재발급 Controller, Service, Repository 단위 테스트 코드
 #### 5-11-1. 토큰 재발급 Controller 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L225
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/services/user.service.unit.spec.js#L15-L45
 
 #### 5-11-2. 토큰 재발급 Service 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L111-L190
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/services/user.service.unit.spec.js#L15-L45
 
 #### 5-11-3. 토큰 재발급 Repository 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/repositories/auth.repository.unit.spec.js#L117
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/repositories/auth.repository.unit.spec.js#L19-L52
 
 
 <br>
@@ -630,7 +630,7 @@ export default {
 
 ### 5-12. 로그아웃 Controller, Service, Repository 단위 테스트 코드
 #### 5-12-1. 로그아웃 Controller 단위 테스트 코드
-- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/controllers/auth.controller.unit.spec.js#L306
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/7e724234f142db956b9b6b581a1f49594923a75b/__tests__/unit/controllers/auth.controller.unit.spec.js#L228-L271
 
 #### 5-12-2. 로그아웃 Service 단위 테스트 코드
 - https://github.com/jkc-mycode/spa_recruit_3_layered/blob/39a215b906d3082a5bd472916165ad22a7f0467b/__tests__/unit/services/auth.service.unit.spec.js#L251
