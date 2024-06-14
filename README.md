@@ -644,14 +644,24 @@ export default {
 
 ## 6. 테스트 사진 첨부
 - User 단위 테스트
+
 ![User Controller 단위 테스트](./imgs/test_user_controller.png)
+
 ![User Service 단위 테스트](./imgs/test_user_service.png)
+
 ![User Repository 단위 테스트](./imgs/test_user_repository.png)
 
+
+<br>
+
 - Auth 단위 테스트
+
 ![Auth Controller 단위 테스트](./imgs/test_auth_controller.png)
+
 ![Auth Service 단위 테스트](./imgs/test_auth_service.png)
+
 ![Auth Repository 단위 테스트](./imgs/test_auth_repository.png)
+
 
 - 회원가입 API
 ![회원가입 API](./imgs/sign-up.png)
