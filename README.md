@@ -473,7 +473,7 @@ export default {
 <br>
 
 
-## 5. 테스트 코드(미완성)
+## 5. 테스트 코드
 ### 5-1. 회원가입 Controller, Service, Repository 단위 테스트 코드
 #### 5-1-1. 회원가입 Controller 단위 테스트 코드
 - https://github.com/jkc-mycode/spa_recruit_3_layered/blob/5b931cdd9c90fec7c1d34e379e007b6639a5d7e1/__tests__/unit/controllers/auth.controller.unit.spec.js#L41-L103
@@ -482,7 +482,7 @@ export default {
 - https://github.com/jkc-mycode/spa_recruit_3_layered/blob/5b931cdd9c90fec7c1d34e379e007b6639a5d7e1/__tests__/unit/services/auth.service.unit.spec.js#L25-L84
 
 #### 5-1-3. 회원가입 Repository 단위 테스트 코드
-- 
+- X
 
 
 <br>
