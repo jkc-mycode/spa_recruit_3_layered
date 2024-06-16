@@ -518,13 +518,13 @@ export default {
 
 ### 5-4. 이력서 생성 Controller, Service, Repository  단위 테스트 코드
 #### 5-4-1. 이력서 생성 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L41-L107
 
 #### 5-4-2. 이력서 생성 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L24-L65
 
 #### 5-4-3. 이력서 생성 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L24-L65
 
 
 <br>
@@ -532,13 +532,13 @@ export default {
 
 ### 5-5. 이력서 목록 조회 Controller, Service, Repository 단위 테스트 코드
 #### 5-5-1. 이력서 목록 조회 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L109-L186
 
 #### 5-5-2. 이력서 목록 조회 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L67-L150
 
 #### 5-5-3. 이력서 목록 조회 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/repositories/resume.repository.unit.spec.js#L68-L121
 
 
 <br>
@@ -546,13 +546,13 @@ export default {
 
 ### 5-6.이력서 상세 조회 Controller, Service, Repository 단위 테스트 코드
 #### 5-6-1. 이력서 상세 조회 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L188-L252
 
 #### 5-6-2. 이력서 상세 조회 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L152-L211
 
 #### 5-6-3. 이력서 상세 조회 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/repositories/resume.repository.unit.spec.js#L123-L161
 
 
 <br>
@@ -560,13 +560,13 @@ export default {
 
 ### 5-7. 이력서 수정 Controller, Service, Repository 단위 테스트 코드
 #### 5-7-1. 이력서 수정 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L254-L328
 
 #### 5-7-2. 이력서 수정 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L213-L261
 
 #### 5-7-3. 이력서 수정 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/repositories/resume.repository.unit.spec.js#L163-L208
 
 
 <br>
@@ -574,13 +574,13 @@ export default {
 
 ### 5-8. 이력서 삭제 Controller, Service, Repository 단위 테스트 코드
 #### 5-8-1. 이력서 삭제 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L330-L386
 
 #### 5-8-2. 이력서 삭제 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L263-L315
 
 #### 5-8-3. 이력서 삭제 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/repositories/resume.repository.unit.spec.js#L210-L236
 
 
 <br>
@@ -588,13 +588,13 @@ export default {
 
 ### 5-9. 이력서 지원 상태 변경 Controller, Service, Repository 단위 테스트 코드
 #### 5-9-1. 이력서 지원 상태 변경 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L388-L462
 
 #### 5-9-2. 이력서 지원 상태 변경 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L317-L383
 
 #### 5-9-3. 이력서 지원 상태 변경 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/repositories/resume.repository.unit.spec.js#L238-L304
 
 
 <br>
@@ -602,13 +602,13 @@ export default {
 
 ### 5-10. 이력서 로그 목록 조회 Controller, Service, Repository 단위 테스트 코드
 #### 5-10-1. 이력서 로그 목록 조회 Controller 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/controllers/resume.controller.unit.spec.js#L464-L521
 
 #### 5-10-2. 이력서 로그 목록 조회 Service 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/services/resume.service.unit.spec.js#L385-L474
 
 #### 5-10-3. 이력서 로그 목록 조회 Repository 단위 테스트 코드
-- 
+- https://github.com/jkc-mycode/spa_recruit_3_layered/blob/8941f502b2f6f264e4ce25639712a5d7d51ac876/__tests__/unit/repositories/resume.repository.unit.spec.js#L306-L355
 
 
 <br>
@@ -643,7 +643,7 @@ export default {
 
 
 ## 6. 테스트 사진 첨부
-- User 단위 테스트
+- **User 단위 테스트**
 
 ![User Controller 단위 테스트](./imgs/test_user_controller.png)
 
@@ -654,13 +654,25 @@ export default {
 
 <br>
 
-- Auth 단위 테스트
+- **Auth 단위 테스트**
 
 ![Auth Controller 단위 테스트](./imgs/test_auth_controller.png)
 
 ![Auth Service 단위 테스트](./imgs/test_auth_service.png)
 
 ![Auth Repository 단위 테스트](./imgs/test_auth_repository.png)
+
+<br>
+
+- **Resume 단위 테스트**
+
+![Resume Controller 단위 테스트](./imgs/test_resume_controller.png)
+
+![Resume Service 단위 테스트](./imgs/test_resume_service.png)
+
+![Resume Repository 단위 테스트](./imgs/test_resume_repository.png)
+
+<br>
 
 
 - 회원가입 API
@@ -827,5 +839,11 @@ export const authAccessTokenMiddleware = (userService) => {
 - 내가 너무 어렵게 모든 코드들을 테스트 할려고 해서 더 복잡하고 이해가 되지 않는것 같음
 
 - 튜터님의 해설강의를 통해서 테스트 코드의 로직과 구현 방법을 익혀보자
+
+- (추가) 해설 강의를 보니까 내가 3계층 분리부터 구조를 잘못 만들었음
+
+- (추가) 기능마다 세세하게 쪼갤 필요가 없는데 나는 세세한 기능으로 분리하고 있었음
+
+- (추가) 해설 강의를 통해서 테스트 코드 역시 리팩토링했고, 이력서 테스트 코드도 작성을 완료함
 
 <br>
